@@ -61,12 +61,14 @@ Preprocess.class와 NeuralElement.class입니다.
 - public static int argmax (double [] elems)
 
 위 메서드들은 각각 가중치 최초 초기화, 행렬곱 연산, GradientDescent 알고리즘을 적용한 가중치 업데이트, argmax 값 계산을 하는데에 사용됩니다. 
+
 | 메서드명 | 매개변수 | 리턴 값 | 설명 |
 | ---- | ---- | -------- | ----------- |
 | InitializeSynapse | - | 이차원 행렬 Synapse | 학습 이터레이션을 돌기 전, 가중치 값들이 기록된 행렬을 초기화시켜주는 메서드 입니다. |
 | matmul | 이차원 행렬 A,B | 이차원 행렬 C (A 행렬곱 B의 결과) | 행렬곱 연산의 결과를 리턴해주는 메서드 입니다. |
 |  UpdateSynapse | 이차원 행렬 Synapse, net, x, y, 상수 learning rate | 이차원 행렬 Synapse (updated) | Gradient Descent 알고리즘에 의해서 결정된 가중치로 업데이트해줍니다.  |
-|argmax|int[] or double[]|int|가장 값이 큰 요소의 인덱스를 리턴해줍니다.
+|argmax|int[] or double[]|int|가장 값이 큰 요소의 인덱스를 리턴해줍니다.|
+
 
 #### Preprocess
 
@@ -77,11 +79,13 @@ Preprocess.class와 NeuralElement.class입니다.
 - public static double[][] getX(int[][] data)
 
 위 메서드들은 각각 텍스트형식의 데이터에서 값을 읽어오는 것, label 데이터를 전처리해주는 것, feature를 전처리해주는 것 입니다.
+
 | 메서드명 | 매개변수 | 리턴 값 | 설명 |
 | ---- | ---- | -------- | ----------- |
 |readData | - | 텍스트 파일에서 읽어온 숫자들로 구성된 이차원 행렬 | data.txt에서 읽어들인 텍스트 파일을 이차원 행렬의 형태로 리턴합니다. |
 | getY |readData의 아웃풋 |이차원 행렬 y| 읽어들인 데이터로부터 라벨 값의 행렬을 만듭니다.|
 |   getX | readData의 아웃풋|이차원 행렬 x |  읽어들인 데이터로 부터 feature 값의 행렬을 만듭니다.|
+
 
 
 #### deaplearning
